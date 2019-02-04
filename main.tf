@@ -5,7 +5,7 @@ resource "azurerm_resource_group" "remote_state_rg" {
 }
 
 resource "azurerm_storage_account" "remote_state_sa" {
-  name = "${var.prefix}-remote-state-sa"
+  name = "${var.prefix}remotestatesa"
   location = "${azurerm_resource_group.remote_state_rg.location}"
   account_tier = "${var.storage_account_tier}"
   resource_group_name = "${azurerm_resource_group.remote_state_rg.name}"
