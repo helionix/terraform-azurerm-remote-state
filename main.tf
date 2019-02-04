@@ -8,6 +8,7 @@ resource "azurerm_storage_account" "remote_state_sa" {
   name = "${var.prefix}remotestatesa"
   location = "${azurerm_resource_group.remote_state_rg.location}"
   account_tier = "${var.storage_account_tier}"
+  account_kind = "${var.storage_account_kind}"
   resource_group_name = "${azurerm_resource_group.remote_state_rg.name}"
   account_replication_type = "${var.storage_account_replication_type}"
 
