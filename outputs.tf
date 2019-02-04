@@ -15,3 +15,7 @@ output "container-name" {
 output "storage_account_id" {
   value = "${azurerm_storage_account.remote_state_sa.id}"
 }
+
+output "storage_account_primary_access_key" {
+  value = "${azurerm_storage_account.remote_state_sa.primary_access_key}"
+}
